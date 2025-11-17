@@ -16,9 +16,56 @@
       background-color: #f7d794;
       color: #2d3436; 
     }
+    
+.heart {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: 0;
+  left: 50px;
+}
+
+.heart::after {
+  top: 0;
+  left: 0;
+}
+
+.heart {
+  background: red;
+}
+
+@keyframes beat {
+  0%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+  25% {
+    transform: rotate(-45deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1);
+  }
+  75% {
+    transform: rotate(-45deg) scale(1.2);
+  }
+}
   </style>
 </head>
 <body>
-  <p>&#10084;</p>
+  <p> </p>
 </body>
 </html>
